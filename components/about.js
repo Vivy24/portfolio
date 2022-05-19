@@ -18,7 +18,13 @@ const About = () => {
         <h1>Hello</h1>
       </div>
       <div className={style.content}>
-        <Image alt="vivyimg" src="/image/vyvy.png" width={250} height={250} />
+        <Image
+          className={style.img}
+          alt="vivyimg"
+          src="/image/vyvy.png"
+          width={250}
+          height={250}
+        />
 
         <h2 data-testid="title">
           Vivy Vuong <br />
