@@ -1,5 +1,5 @@
-import About from "../components/About";
-import Skill from "../components/Skill";
+import About from "../components/about";
+import Skill from "../components/skill";
 import Project from "../components/project";
 import Contact from "../components/contact";
 
