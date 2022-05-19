@@ -27,7 +27,7 @@
   max-width: 1200px;
 }
 
-.content img {
+.content .img {
   border-radius: 50%;
 }
 
@@ -75,11 +75,6 @@
     transform: rotate(0deg);
     margin: auto;
     text-align: center;
-  }
-
-  .content img {
-    width: 250px;
-    height: 250px;
   }
 
   .content p {
