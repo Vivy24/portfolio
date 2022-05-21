@@ -43,9 +43,9 @@ const About = () => {
                 Personal Info
               </span>{" "}
               <br />
-              My name is Vivy Vuong. I'm a programmer student, who passionate
-              about web development. My journey begins when I was in grade 11
-              after taking a highschool course. Since then, I have been
+              My name is Vivy Vuong. I&apos;m a programmer student, who
+              passionate about web development. My journey begins when I was in
+              grade 11 after taking a highschool course. Since then, I have been
               self-learning and pursuing a degree{" "}
               <br className={style.styledbr} />
               in coding for 2 years.
@@ -53,7 +53,11 @@ const About = () => {
 
             <ul>
               <li>
-                <a href="mailto: vngvy48@gmail.com" target="_blank">
+                <a
+                  href="mailto: vngvy48@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon
                     style={{
                       color: "black",
@@ -71,6 +75,7 @@ const About = () => {
                 <a
                   href="https://www.linkedin.com/in/vivyvuong/"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <FontAwesomeIcon
                     style={{
@@ -86,7 +91,11 @@ const About = () => {
                 </a>
               </li>
               <li>
-                <a href="https://github.com/Vivy24" target="_blank">
+                <a
+                  href="https://github.com/Vivy24"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <FontAwesomeIcon
                     style={{
                       color: "black",
@@ -135,7 +144,11 @@ const About = () => {
           </div>
           <ul>
             <li>
-              <a href="mailto: vngvy48@gmail.com" target="_blank">
+              <a
+                href="mailto: vngvy48@gmail.com"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   style={{
                     color: "black",
@@ -150,7 +163,11 @@ const About = () => {
               </a>
             </li>
             <li>
-              <a href="https://www.linkedin.com/in/vivyvuong/" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/vivyvuong/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   style={{
                     color: "black",
@@ -165,7 +182,11 @@ const About = () => {
               </a>
             </li>
             <li>
-              <a href="https://github.com/Vivy24" target="_blank">
+              <a
+                href="https://github.com/Vivy24"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon
                   style={{
                     color: "black",
