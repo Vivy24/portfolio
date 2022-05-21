@@ -1,18 +1,15 @@
 import style from "../styles/project.module.css";
-import ProjectDesc from "./projectDes";
+import EmblaCarousel from "./carousel";
 const Project = () => {
   return (
     <div className={style.projectSection}>
-      <hr className={style.topNav} />
-
-      <div className={style.header}>
+      <div className={style.header} data-testid="projectTitle">
         <h1>Project</h1>
       </div>
 
       <div className={style.content}>
-        <hr className={style.top} />
-
-        <ProjectDesc
+        <EmblaCarousel />
+        {/* <ProjectDesc
           name={"Peer Tutor"}
           des={
             "A web-based application that allow a student to book a daily or monthly peer tutor based on their department,subject and review"
@@ -71,9 +68,7 @@ const Project = () => {
           image={"image/projects/webstorage.png"}
           github={"https://github.com/Vivy24/PeerTutor"}
           publicLink={"https://websitestorage.herokuapp.com/"}
-        />
-
-        <hr className={style.bottom} />
+        /> */}
       </div>
     </div>
   );

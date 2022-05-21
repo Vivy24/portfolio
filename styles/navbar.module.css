@@ -1,0 +1,50 @@
+.navbar {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar p {
+  padding: 10px;
+  font-size: 25px;
+  color: #e75480;
+}
+.navbar .link ul {
+  list-style: none;
+}
+
+.navbar .link li {
+  font-size: 25px;
+  padding: 10px 2em 10px 2em;
+
+  display: inline-block;
+  color: white;
+}
+
+.navbar .link .active {
+  color: #e75480;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    display: none;
+  }
+
+  .navbar {
+    display: block;
+  }
+  .navbar .link ul {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .navbar .link li {
+    font-size: 1.5em;
+    padding: 10px 0.75em 10px 0.75em;
+
+    color: white;
+  }
+}

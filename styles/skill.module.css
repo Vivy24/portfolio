@@ -1,29 +1,40 @@
 .skillSection {
-  margin-top: 6em;
   display: grid;
-  grid-template-columns: [first] 20% [line3] auto [col4-start] 20% [end];
+  grid-template-columns: 20% [line1] auto [end];
+  padding: 5em 5em 5em 2em;
+}
+
+.hrline {
+  width: 30%;
+  margin: 0 0 8em 6em;
 }
 
 .content {
   margin-left: 2em;
   grid-row-start: 1;
-  grid-column-start: line3;
+  grid-column-start: line1;
   grid-column-end: col4-start;
   width: 100%;
   max-width: 1200px;
 }
 
 .header {
-  margin-left: 4em;
-  background-color: brown;
+  width: 20%;
   height: 300px;
-  width: 250px;
+  width: 225px;
+  margin: 4em 0 0 4em;
+  background-color: #e75480;
   grid-row-start: 1;
-  grid-column-start: col4-start;
 }
 
 .header h1 {
   transform: rotate(-90deg);
+}
+
+.topNav {
+  display: block;
+  width: 40%;
+  margin-left: auto;
 }
 
 @media (min-width: 1400px) {
@@ -38,7 +49,7 @@
   }
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1850px) {
   .skillSection {
     display: block;
     width: 100%;
@@ -52,6 +63,7 @@
   }
 
   .header h1 {
+    text-transform: uppercase;
     text-align: center;
     transform: rotate(0);
   }
@@ -59,15 +71,21 @@
   .content {
     padding: 3em;
   }
+
+  .skillGroup {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 500px) {
   .skillSection {
-    padding: 0;
+    padding: 2em 0;
     word-wrap: break-word;
   }
 
   .content {
-    padding: 0;
+    margin-left: 2em;
+    width: 90%;
+    padding: 0 !important;
   }
 }

@@ -2,8 +2,9 @@ import About from "../components/about";
 import Skill from "../components/skill";
 import Project from "../components/project";
 import Contact from "../components/contact";
-
+import Navbar from "../components/navbar";
 import Head from "next/head";
+import style from "../styles/index.module.css";
 export default function Home() {
   return (
     <div>
@@ -14,20 +15,23 @@ export default function Home() {
           content="initial-scale=1.0, width=device-width"
         />
       </Head>
-      <div>
-        <div id="#About">
+      <div className={style.main}>
+        <Navbar />
+        <div id="About">
           <About />
         </div>
+        <hr />
 
-        <div id="#Skill">
+        <div id="Skill">
           <Skill />
         </div>
+        <hr className={style.right} />
 
-        <div id="#Project">
+        <div id="Project">
           <Project />
         </div>
-
-        <div id="#Contact">
+        <hr />
+        <div id="Contact">
           <Contact />
         </div>
       </div>

@@ -10,7 +10,7 @@ describe("SkillSection", () => {
 
   it("render correctly", () => {
     render(<Skill />);
-    expect(screen.getAllByTestId("skill")).toHaveLength(10);
+    expect(screen.getAllByTestId("skill")).toHaveLength(9);
     expect(screen.getByText("Skill")).toBeInTheDocument();
   });
 });

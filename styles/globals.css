@@ -1,10 +1,15 @@
 html,
 body {
-  overflow-x: hidden;
-  padding: 1em 0 0 0;
+  overflow-y: initial;
+  padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: linear-gradient(to bottom, transparent 50%, #131313 50%),
+    linear-gradient(to right, #0c0d0a 50%, #131313 50%);
+  background-size: 10px 10px, 10px 10px;
+  color: white;
+  max-width: 100%;
 }
 
 a {
@@ -20,9 +25,10 @@ a {
 
 h1 {
   font-size: 10em;
+  text-transform: lowercase;
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1850px) {
   h1 {
     font-size: 4em;
     text-align: center;
@@ -33,5 +39,10 @@ h1 {
   h1 {
     font-size: 3em;
     text-align: center;
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
   }
 }

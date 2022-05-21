@@ -18,9 +18,10 @@ const ProjectDesc = ({
         className={style.img}
         alt="projectImage"
         src={`/${image}`}
-        width={1000}
-        height={500}
+        width={900}
+        height={400}
       />
+      <hr style={{ width: "80%", margin: "0 auto" }} />
       <div className={style.projectContent}>
         <h4>{name}</h4>
         <p data-testid="description" style={{ textAlign: "justify" }}>

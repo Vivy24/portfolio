@@ -1,74 +1,186 @@
-import { useState } from "react";
 import style from "../styles/about.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Import the FontAwesomeIcon component
-import { faHandPeace } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMailBulk } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const About = () => {
-  const [more, setMore] = useState(false);
-
-  const readMore = () => {
-    setMore((prevState) => {
-      return !prevState;
-    });
-  };
   return (
     <div className={style.aboutSection}>
       <div className={style.helloSection}>
         <h1>Hello</h1>
       </div>
       <div className={style.content}>
-        <Image
-          className={style.img}
-          alt="vivyimg"
-          src="/image/vyvy.png"
-          width={250}
-          height={250}
-        />
+        <div className={style.left}>
+          <div className={style.imgContent}>
+            <Image
+              className={style.img}
+              alt="vivyimg"
+              src="/image/vyvy.png"
+              layout="fill"
+              objectFit="contain"
+            />
+          </div>
+          <div className={style.titleInner}>
+            <p data-testid="title">
+              <span
+                style={{
+                  fontSize: "3em",
+                  fontWeight: "bold",
+                  color: "#e75480",
+                }}
+              >
+                Vivy Vuong
+              </span>{" "}
+              <br />
+              <span style={{ fontSize: "1.5em" }}>Web Developer</span>
+            </p>
+          </div>
 
-        <h2 data-testid="title">
-          Vivy Vuong <br />
-          Web Developer
-        </h2>
-        <p data-testid="content">
-          Hi{" "}
-          <FontAwesomeIcon
-            style={{ fontSize: "25px" }}
-            icon={faHandPeace}
-          ></FontAwesomeIcon>{" "}
-          &apos;
-          <br /> My name is Vivy Vuong. I&quot;m a Computer Science
-          student&apos; who passionate about becoming a web developer. My coding
-          journey begin when I was in grade 11. In grade 11&apos; I took the
-          Introduction to Computer because everyone told me it is an easy
-          course. Also&apos; I&quot;m very good at Math at that time &apos; so I
-          thought I would do well in that class. Eventually&apos; I fell in love
-          with coding after this class. I love spending time designing and
-          finding the best solution to solve the problem.
-          {more ? (
-            <span className={style.readMore} data-testid="more">
-              Then&apos; during the covid time&apos; I&quot;m learning code as a
-              hobby in my free time. I&quot;m self-learning through many online
-              materials such as Youtube&apos; FreeCodeCamp&apos; Udemy&apos;
-              etc. After learning a programming language&apos; I asked myself
-              which industry I should focus on? After a week of
-              researching&apos; I decided to become a web developer because I
-              think that website is the most powerful tool for us&apos;
-              developers&apos; to &quot;talk&quot; to the world since everyone
-              can easily get access to the web. This is how my journey to become
-              a good programmer and a good web developer begins.
-            </span>
-          ) : (
-            <span className={style.dots} data-testid="less">
-              ...
-            </span>
-          )}
-          <button onClick={readMore} data-testid="button">
-            Read {more ? "Less" : "More"}
-          </button>
-        </p>
+          <div className={style.intro}>
+            <p data-testid="content">
+              <span style={{ textTransform: "uppercase", fontSize: "1.25em" }}>
+                Personal Info
+              </span>{" "}
+              <br />
+              My name is Vivy Vuong. I'm a programmer student, who passionate
+              about web development. My journey begins when I was in grade 11
+              after taking a highschool course. Since then, I have been
+              self-learning and pursuing a degree{" "}
+              <br className={style.styledbr} />
+              in coding for 2 years.
+            </p>
 
-        <hr />
+            <ul>
+              <li>
+                <a href="mailto: vngvy48@gmail.com" target="_blank">
+                  <FontAwesomeIcon
+                    style={{
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#e75480",
+                      padding: "10px",
+                      borderRadius: "50%",
+                    }}
+                    icon={faMailBulk}
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/vivyvuong/"
+                  target="_blank"
+                >
+                  <FontAwesomeIcon
+                    style={{
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#e75480",
+                      padding: "10px",
+                      borderRadius: "50%",
+                    }}
+                    icon={faLinkedinIn}
+                  />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Vivy24" target="_blank">
+                  <FontAwesomeIcon
+                    style={{
+                      color: "black",
+                      width: "40px",
+                      height: "40px",
+                      backgroundColor: "#e75480",
+                      padding: "10px",
+                      borderRadius: "50%",
+                    }}
+                    icon={faGithub}
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className={style.right}>
+          <div className={style.name}>
+            <p data-testid="title">
+              <span style={{ textTransform: "uppercase", fontSize: "2em" }}>
+                My name is
+              </span>
+              <br />
+              <span
+                style={{
+                  textTransform: "uppercase",
+                  fontSize: "4em",
+                  fontWeight: "bold",
+                  color: "#e75480",
+                }}
+              >
+                Vivy Vuong
+              </span>
+              <br />
+              <span style={{ fontSize: "1.2em" }}>Web Developer</span>
+            </p>
+          </div>
+          <hr />
+
+          <div className={style.desc}>
+            <p style={{ fontSize: "1.5em" }}>
+              A programmer who loves coding web to talk to the world
+              <br />
+              Feel free to contact me through
+            </p>
+          </div>
+          <ul>
+            <li>
+              <a href="mailto: vngvy48@gmail.com" target="_blank">
+                <FontAwesomeIcon
+                  style={{
+                    color: "black",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#e75480",
+                    padding: "10px",
+                    borderRadius: "50%",
+                  }}
+                  icon={faMailBulk}
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/vivyvuong/" target="_blank">
+                <FontAwesomeIcon
+                  style={{
+                    color: "black",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#e75480",
+                    padding: "10px",
+                    borderRadius: "50%",
+                  }}
+                  icon={faLinkedinIn}
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Vivy24" target="_blank">
+                <FontAwesomeIcon
+                  style={{
+                    color: "black",
+                    width: "40px",
+                    height: "40px",
+                    backgroundColor: "#e75480",
+                    padding: "10px",
+                    borderRadius: "50%",
+                  }}
+                  icon={faGithub}
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

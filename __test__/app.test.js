@@ -9,8 +9,8 @@ describe("testing index page", () => {
   it("render 4 section successfully", () => {
     render(<Index />);
     expect(screen.getByText("Hello")).toBeInTheDocument();
-    expect(screen.getByText("Skill")).toBeInTheDocument();
-    expect(screen.getByText("Project")).toBeInTheDocument();
-    expect(screen.getByText("Contact")).toBeInTheDocument();
+    expect(screen.getByText("Education")).toBeInTheDocument();
+    expect(screen.getByTestId("projectTitle")).toBeInTheDocument();
+    expect(screen.getByText("Download")).toBeInTheDocument();
   });
 });

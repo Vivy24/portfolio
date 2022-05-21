@@ -1,15 +1,17 @@
 .projectSection {
-  margin-top: 2em;
+  padding: 2em 0 4em 0;
+  max-width: 100vw !important;
   display: grid;
-  grid-template-columns: [first] 20% [line3] auto [col4-start] 20% [end];
+  grid-template-columns: auto [line1] 20% [end];
 }
 .header {
-  grid-column-start: first;
-  grid-column-end: line3;
-  background-color: brown;
+  grid-column-start: line1;
+  width: 20%;
+  grid-row-start: 1;
   height: 300px;
-  width: 250px;
-  margin-left: 2em;
+  width: 225px;
+  margin: 4em 0 0 4em;
+  background-color: #e75480;
 }
 
 .header h1 {
@@ -17,9 +19,9 @@
 }
 
 .content {
-  width: 100%;
-  grid-column-start: line3;
-  grid-column-end: col4-start;
+  width: 100% !important;
+  padding-left: 2em;
+  grid-column-end: line1;
 }
 
 .projectSection .bottom {
@@ -29,21 +31,15 @@
   margin-left: auto;
 }
 
-.top {
-  height: 1px;
-  margin-left: 3em;
-  width: 50%;
-  margin-top: 4em;
-}
 .topNav {
-  display: none;
+  display: block;
+  height: 1px;
+  margin-left: auto;
+  width: 40%;
+  margin-bottom: 4em;
 }
 
-@media (max-width: 1350px) {
-  .top {
-    display: none;
-  }
-
+@media (max-width: 1850px) {
   .topNav {
     display: block;
     height: 1px;
@@ -64,6 +60,7 @@
   }
 
   .header h1 {
+    text-transform: uppercase;
     text-align: center;
     transform: rotate(0);
   }
@@ -76,8 +73,9 @@
 @media (max-width: 500px) {
   .projectSection {
     width: 100%;
+    padding: 2em 0;
   }
   .content {
-    padding: 0.5em;
+    padding: 1em;
   }
 }
