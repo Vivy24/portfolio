@@ -2,10 +2,6 @@
   position: relative;
   background-color: transparent;
   width: 100%;
-  padding: 2em 0;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .embla__viewport {
@@ -14,6 +10,7 @@
   max-width: 900px;
   border: 2px solid #e75480;
   box-shadow: #e75480 0px 3px 50px -12px;
+  margin: 0 auto;
 }
 
 .embla__viewport.is-draggable {
@@ -31,14 +28,13 @@
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -webkit-tap-highlight-color: transparent;
-  margin-left: -10px;
 }
 
 .embla__slide {
   height: 600px;
   position: relative;
   min-width: 100%;
-  padding-left: 10px;
+  padding: 0;
 }
 
 .embla__slide__inner {
@@ -53,37 +49,31 @@
 }
 
 .embla ul li {
-  font-size: 2em;
   margin: 0.5em 0.5em;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  vertical-align: center;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
-  color: black;
-  font-weight: bold;
-  background-color: #e75480;
+  background-color: white;
   display: inline-block;
-  border: 2px solid #e75480;
+  opacity: 80%;
   box-shadow: #e75480 0px 3px 50px -12px;
 }
 
-.embla ul li:hover {
-  box-shadow: white 0px 3px 50px -12px;
+.selected {
+  background-color: #e75480 !important;
 }
-
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .embla ul li {
-    font-size: 1.5em;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
   }
+
   .embla__slide {
-    height: 450px;
+    height: 480px;
     padding: 0;
   }
 
-  .embla__container {
+  .embla__viewport {
     margin: 0;
   }
 }

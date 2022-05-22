@@ -6,26 +6,14 @@ import style from "../styles/embla.module.css";
 import ProjectDesc from "./projectDes";
 
 const EmblaCarousel = ({ options = { loop: true } }) => {
+  const [selectedIndex, setSelectedIndex] = useState(0);
   const autoplay = useRef(
-    Autoplay(
-      { delay: 5000, stopOnInteraction: false },
-      (emblaRoot) => emblaRoot.parentElement
-    )
+    Autoplay({ delay: 5000, stopOnInteraction: false }, (emblaRoot) => {
+      emblaRoot.parentElement;
+    })
   );
 
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
-
-  const scrollNext = useCallback(() => {
-    if (!emblaApi) return;
-    emblaApi.scrollNext();
-    autoplay.current.reset();
-  }, [emblaApi]);
-
-  const scrollPrev = useCallback(() => {
-    if (!emblaApi) return;
-    emblaApi.scrollPrev();
-    autoplay.current.reset();
-  }, [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -35,6 +23,9 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
     if (!emblaApi) return;
     onSelect();
     emblaApi.on("select", onSelect);
+    emblaApi.on("select", () => {
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    });
   }, [emblaApi, onSelect]);
 
   return (
@@ -116,40 +107,40 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
 
       <ul>
         <li
+          className={style[`${selectedIndex == 1 ? "selected" : ""}`]}
           onClick={() => {
             emblaApi.scrollTo(1);
+            setSelectedIndex(emblaApi.selectedScrollSnap());
           }}
-        >
-          1
-        </li>
+        ></li>
         <li
+          className={style[`${selectedIndex == 2 ? "selected" : ""}`]}
           onClick={() => {
             emblaApi.scrollTo(2);
+            setSelectedIndex(emblaApi.selectedScrollSnap());
           }}
-        >
-          2
-        </li>
+        ></li>
         <li
+          className={style[`${selectedIndex == 3 ? "selected" : ""}`]}
           onClick={() => {
             emblaApi.scrollTo(3);
+            setSelectedIndex(emblaApi.selectedScrollSnap());
           }}
-        >
-          3
-        </li>
+        ></li>
         <li
+          className={style[`${selectedIndex == 4 ? "selected" : ""}`]}
           onClick={() => {
             emblaApi.scrollTo(4);
+            setSelectedIndex(emblaApi.selectedScrollSnap());
           }}
-        >
-          4
-        </li>
+        ></li>
         <li
+          className={style[`${selectedIndex == 0 ? "selected" : ""}`]}
           onClick={() => {
             emblaApi.scrollTo(5);
+            setSelectedIndex(emblaApi.selectedScrollSnap());
           }}
-        >
-          5
-        </li>
+        ></li>
       </ul>
     </div>
   );

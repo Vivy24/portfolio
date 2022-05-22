@@ -1,7 +1,7 @@
 .skillSection {
   display: grid;
   grid-template-columns: 20% [line1] auto [end];
-  padding: 5em 5em 5em 2em;
+  padding: 4em 4em 4em 2em;
 }
 
 .hrline {
@@ -22,7 +22,7 @@
   width: 20%;
   height: 300px;
   width: 225px;
-  margin: 4em 0 0 4em;
+  margin: 4em 0 4em 0 !important;
   background-color: #e75480;
   grid-row-start: 1;
 }
@@ -37,7 +37,7 @@
   margin-left: auto;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1600px) {
   .content {
     display: flex;
     justify-content: space-around;
@@ -45,6 +45,7 @@
   }
 
   .skillGroup {
+    padding: 1em;
     text-align: justify;
   }
 }
@@ -56,7 +57,7 @@
   }
 
   .header {
-    margin: 0;
+    margin: 2em 0 2em 0 !important;
     background-color: transparent;
     height: fit-content;
     width: 100%;
@@ -74,6 +75,7 @@
 
   .skillGroup {
     font-size: 1.5em;
+    padding: 0;
   }
 }
 
@@ -87,5 +89,9 @@
     margin-left: 2em;
     width: 90%;
     padding: 0 !important;
+  }
+
+  .skillGroup {
+    padding: 0;
   }
 }

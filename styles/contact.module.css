@@ -1,8 +1,7 @@
 .contactSection {
-  margin-top: 4em;
   display: grid;
   grid-template-columns: 30% [line1] 60% [end];
-  padding: 5em 5em 5em 2em;
+  padding: 4em 4em 4em 2em;
 }
 
 .header {
@@ -97,7 +96,7 @@
 
   .header {
     padding: 0;
-    margin: 0;
+    margin: 2em 0 2em 0 !important;
     width: 100%;
     background-color: transparent;
     display: block;

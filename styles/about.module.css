@@ -1,5 +1,5 @@
 .aboutSection {
-  padding-top: 60px;
+  padding: 4em 4em 4em 2em;
   display: grid;
   grid-template-columns: auto [line1] 20% [end];
 }
@@ -154,7 +154,7 @@
   }
 
   .helloSection {
-    margin: 0;
+    margin: 2em 0 2em 0 !important;
     width: 100%;
     background-color: transparent;
     display: block;
