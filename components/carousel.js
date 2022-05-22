@@ -32,7 +32,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
     <div className={style.embla}>
       <div className={style["embla__viewport"]} ref={emblaRef}>
         <div className={style["embla__container"]}>
-          <div className={style["embla__slide"]} key={1}>
+          <div className={style["embla__slide"]} key={0}>
             <ProjectDesc
               name={"Peer Tutor"}
               des={
@@ -51,7 +51,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={2}>
+          <div className={style["embla__slide"]} key={1}>
             <ProjectDesc
               name={"Fire Message"}
               des={
@@ -64,7 +64,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={3}>
+          <div className={style["embla__slide"]} key={2}>
             <ProjectDesc
               name={"Web Storage"}
               des={
@@ -72,12 +72,12 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               }
               languageArray={["Flask", "EJS", "MySQL", "Bootstrap"]}
               image={"image/projects/webstorage.png"}
-              github={"https://github.com/Vivy24/PeerTutor"}
+              github={"https://github.com/Vivy24/WS"}
               publicLink={"https://websitestorage.herokuapp.com/"}
             />
           </div>
 
-          <div className={style["embla__slide"]} key={4}>
+          <div className={style["embla__slide"]} key={3}>
             <ProjectDesc
               name={"Jane Store"}
               des={
@@ -90,7 +90,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={5}>
+          <div className={style["embla__slide"]} key={4}>
             <ProjectDesc
               name={"Blackjack React"}
               des={
@@ -102,45 +102,32 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               publicLink={"https://blackjack-reactjs.vercel.app/"}
             />
           </div>
+
+          <div className={style["embla__slide"]} key={5}>
+            <ProjectDesc
+              name={"Sushi Ontario"}
+              des={"A responsive sushi restaurant landing page "}
+              languageArray={["HTML", "CSS", "Javascript"]}
+              image={"image/projects/sushiON.png"}
+              github={"https://github.com/Vivy24/sushiON"}
+              publicLink={"https://vivy24.github.io/sushiON/"}
+            />
+          </div>
         </div>
       </div>
 
       <ul>
-        <li
-          className={style[`${selectedIndex == 1 ? "selected" : ""}`]}
-          onClick={() => {
-            emblaApi.scrollTo(1);
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-          }}
-        ></li>
-        <li
-          className={style[`${selectedIndex == 2 ? "selected" : ""}`]}
-          onClick={() => {
-            emblaApi.scrollTo(2);
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-          }}
-        ></li>
-        <li
-          className={style[`${selectedIndex == 3 ? "selected" : ""}`]}
-          onClick={() => {
-            emblaApi.scrollTo(3);
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-          }}
-        ></li>
-        <li
-          className={style[`${selectedIndex == 4 ? "selected" : ""}`]}
-          onClick={() => {
-            emblaApi.scrollTo(4);
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-          }}
-        ></li>
-        <li
-          className={style[`${selectedIndex == 0 ? "selected" : ""}`]}
-          onClick={() => {
-            emblaApi.scrollTo(5);
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-          }}
-        ></li>
+        {[...Array(6)].map((x, i) => {
+          return (
+            <li
+              className={style[`${selectedIndex == i ? "selected" : ""}`]}
+              onClick={() => {
+                emblaApi.scrollTo(i);
+                setSelectedIndex(emblaApi.selectedScrollSnap());
+              }}
+            ></li>
+          );
+        })}
       </ul>
     </div>
   );
