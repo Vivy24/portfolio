@@ -120,6 +120,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
         {[...Array(6)].map((x, i) => {
           return (
             <li
+              key={i}
               className={style[`${selectedIndex == i ? "selected" : ""}`]}
               onClick={() => {
                 emblaApi.scrollTo(i);
