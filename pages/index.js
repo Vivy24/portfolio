@@ -14,6 +14,8 @@ export default function Home() {
           key="viewport width"
           content="initial-scale=1.0, width=device-width"
         />
+
+        <link rel="shortcut icon" href="/image/vyvy.png" />
       </Head>
       <div className={style.main}>
         <Navbar />
