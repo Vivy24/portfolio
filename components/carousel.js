@@ -48,6 +48,7 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               ]}
               image={"image/projects/peertutor.png"}
               github={"https://github.com/Vivy24/PeerTutor"}
+              publicLink={"https://peer-tutor-vivy.herokuapp.com/"}
             />
           </div>
 
