@@ -1,10 +1,11 @@
-import About from "../components/about";
-import Skill from "../components/skill";
-import Project from "../components/project";
-import Contact from "../components/contact";
-import Navbar from "../components/navbar";
-import Head from "next/head";
-import style from "../styles/index.module.css";
+import About from "../components/about"
+import Skill from "../components/skill"
+import Project from "../components/project"
+import Contact from "../components/contact"
+import Navbar from "../components/navbar"
+import Work from "../components/work"
+import Head from "next/head"
+import style from "../styles/index.module.css"
 export default function Home() {
   return (
     <div>
@@ -15,7 +16,10 @@ export default function Home() {
           content="initial-scale=1.0, width=device-width"
         />
 
-        <link rel="shortcut icon" href="/image/vyvy.png" />
+        <link
+          rel="shortcut icon"
+          href="/image/vyvy.png"
+        />
       </Head>
       <div className={style.main}>
         <Navbar />
@@ -28,15 +32,18 @@ export default function Home() {
           <Skill />
         </div>
         <hr className={style.right} />
-
+        <div id="Work">
+          <Work />
+        </div>
+        <hr className={style.hrProWork} />
         <div id="Project">
           <Project />
         </div>
-        <hr />
+        <hr className={style.right} />
         <div id="Contact">
           <Contact />
         </div>
       </div>
     </div>
-  );
+  )
 }

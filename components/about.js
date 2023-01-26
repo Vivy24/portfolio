@@ -1,8 +1,8 @@
-import style from "../styles/about.module.css";
-import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMailBulk } from "@fortawesome/free-solid-svg-icons"; // import the icons you need
-import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import style from "../styles/about.module.css"
+import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMailBulk } from "@fortawesome/free-solid-svg-icons" // import the icons you need
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 
 const About = () => {
   return (
@@ -73,7 +73,7 @@ const About = () => {
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/vivyvuong/"
+                  href="https://www.linkedin.com/in/vivy/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -204,7 +204,7 @@ const About = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default About;
+export default About

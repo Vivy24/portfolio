@@ -1,22 +1,29 @@
 .main hr {
-  width: 30%;
-  margin-left: 3em;
+    width: 30%;
+    margin-left: 3em;
 }
 
 .right {
-  margin-left: auto !important;
-  margin-right: 3em;
+    margin-left: auto !important;
+    margin-right: 3em;
 }
 
 .main {
-  padding-bottom: 10em;
-  overflow-y: hidden;
+    padding-bottom: 10em;
+    overflow-y: hidden;
 }
 
-@media (max-width: 1850px) {
-  .main {
-    width: fit-content;
-    padding: 0;
-    margin: 0;
-  }
+.hrProWork {
+    margin: 150px 0 250px;
+}
+
+
+@media(max-width: 1850px) {
+    .main {
+        width: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+
 }

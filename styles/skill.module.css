@@ -1,97 +1,96 @@
 .skillSection {
-  display: grid;
-  grid-template-columns: 20% [line1] auto [end];
-  padding: 4em 4em 4em 2em;
+    display: grid;
+    grid-template-columns: 20% [line1] auto [end];
+    padding: 4em 4em 4em 2em;
 }
 
 .hrline {
-  width: 30%;
-  margin: 0 0 8em 6em;
+    width: 30%;
+    margin: 0 0 8em 6em;
 }
 
 .content {
-  margin-left: 2em;
-  grid-row-start: 1;
-  grid-column-start: line1;
-  grid-column-end: col4-start;
-  width: 100%;
-  max-width: 1200px;
+    margin-left: 2em;
+    grid-row-start: 1;
+    grid-column-start: line1;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .header {
-  width: 20%;
-  height: 300px;
-  width: 225px;
-  margin: 4em 0 4em 0 !important;
-  background-color: #e75480;
-  grid-row-start: 1;
+    width: 20%;
+    height: 300px;
+    width: 225px;
+    margin: 4em 0 !important;
+    background-color: #e75480;
+    grid-row-start: 1;
 }
 
 .header h1 {
-  transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 .topNav {
-  display: block;
-  width: 40%;
-  margin-left: auto;
-}
-
-@media (min-width: 1600px) {
-  .content {
-    display: flex;
-    justify-content: space-around;
-    font-size: larger;
-  }
-
-  .skillGroup {
-    padding: 1em;
-    text-align: justify;
-  }
-}
-
-@media (max-width: 1850px) {
-  .skillSection {
     display: block;
-    width: 100%;
-  }
-
-  .header {
-    margin: 2em 0 2em 0 !important;
-    background-color: transparent;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .header h1 {
-    text-transform: uppercase;
-    text-align: center;
-    transform: rotate(0);
-  }
-
-  .content {
-    padding: 3em;
-  }
-
-  .skillGroup {
-    font-size: 1.5em;
-    padding: 0;
-  }
+    width: 40%;
+    margin-left: auto;
 }
 
-@media (max-width: 500px) {
-  .skillSection {
-    padding: 2em 0;
-    word-wrap: break-word;
-  }
+@media(min-width: 1600px) {
+    .content {
+        display: flex;
+        justify-content: space-around;
+        font-size: larger;
+    }
 
-  .content {
-    margin-left: 2em;
-    width: 90%;
-    padding: 0 !important;
-  }
+    .skillGroup {
+        padding: 1em;
+        text-align: justify;
+    }
+}
 
-  .skillGroup {
-    padding: 0;
-  }
+@media(max-width: 1850px) {
+    .skillSection {
+        display: block;
+        width: 100%;
+    }
+
+    .header {
+        margin: 2em 0 !important;
+        background-color: transparent;
+        height: fit-content;
+        width: 100%;
+    }
+
+    .header h1 {
+        text-transform: uppercase;
+        text-align: center;
+        transform: rotate(0);
+    }
+
+    .content {
+        padding: 3em;
+    }
+
+    .skillGroup {
+        font-size: 1.5em;
+        padding: 0;
+    }
+}
+
+@media(max-width: 500px) {
+    .skillSection {
+        padding: 2em 0;
+        word-wrap: break-word;
+    }
+
+    .content {
+        margin-left: 2em;
+        width: 90%;
+        padding: 0 !important;
+    }
+
+    .skillGroup {
+        padding: 0;
+    }
 }

@@ -1,38 +1,44 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
-import useEmblaCarousel from "embla-carousel-react";
-import Autoplay from "embla-carousel-autoplay";
-import style from "../styles/embla.module.css";
+import React, { useState, useEffect, useCallback, useRef } from "react"
+import useEmblaCarousel from "embla-carousel-react"
+import Autoplay from "embla-carousel-autoplay"
+import style from "../styles/embla.module.css"
 
-import ProjectDesc from "./projectDes";
+import ProjectDesc from "./projectDes"
 
 const EmblaCarousel = ({ options = { loop: true } }) => {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(0)
   const autoplay = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: false }, (emblaRoot) => {
-      emblaRoot.parentElement;
+      emblaRoot.parentElement
     })
-  );
+  )
 
-  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current]);
+  const [emblaRef, emblaApi] = useEmblaCarousel(options, [autoplay.current])
 
   const onSelect = useCallback(() => {
-    if (!emblaApi) return;
-  }, [emblaApi]);
+    if (!emblaApi) return
+  }, [emblaApi])
 
   useEffect(() => {
-    if (!emblaApi) return;
-    onSelect();
-    emblaApi.on("select", onSelect);
+    if (!emblaApi) return
+    onSelect()
+    emblaApi.on("select", onSelect)
     emblaApi.on("select", () => {
-      setSelectedIndex(emblaApi.selectedScrollSnap());
-    });
-  }, [emblaApi, onSelect]);
+      setSelectedIndex(emblaApi.selectedScrollSnap())
+    })
+  }, [emblaApi, onSelect])
 
   return (
     <div className={style.embla}>
-      <div className={style["embla__viewport"]} ref={emblaRef}>
+      <div
+        className={style["embla__viewport"]}
+        ref={emblaRef}
+      >
         <div className={style["embla__container"]}>
-          <div className={style["embla__slide"]} key={0}>
+          <div
+            className={style["embla__slide"]}
+            key={0}
+          >
             <ProjectDesc
               name={"Peer Tutor"}
               des={
@@ -52,7 +58,10 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={1}>
+          <div
+            className={style["embla__slide"]}
+            key={1}
+          >
             <ProjectDesc
               name={"Fire Message"}
               des={
@@ -65,7 +74,10 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={2}>
+          <div
+            className={style["embla__slide"]}
+            key={2}
+          >
             <ProjectDesc
               name={"Web Storage"}
               des={
@@ -78,7 +90,10 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={3}>
+          <div
+            className={style["embla__slide"]}
+            key={3}
+          >
             <ProjectDesc
               name={"Jane Store"}
               des={
@@ -91,7 +106,10 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={4}>
+          <div
+            className={style["embla__slide"]}
+            key={4}
+          >
             <ProjectDesc
               name={"Blackjack React"}
               des={
@@ -104,7 +122,10 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
             />
           </div>
 
-          <div className={style["embla__slide"]} key={5}>
+          <div
+            className={style["embla__slide"]}
+            key={5}
+          >
             <ProjectDesc
               name={"Sushi Ontario"}
               des={"A responsive sushi restaurant landing page "}
@@ -124,15 +145,15 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               key={i}
               className={style[`${selectedIndex == i ? "selected" : ""}`]}
               onClick={() => {
-                emblaApi.scrollTo(i);
-                setSelectedIndex(emblaApi.selectedScrollSnap());
+                emblaApi.scrollTo(i)
+                setSelectedIndex(emblaApi.selectedScrollSnap())
               }}
             ></li>
-          );
+          )
         })}
       </ul>
     </div>
-  );
-};
+  )
+}
 
-export default EmblaCarousel;
+export default EmblaCarousel

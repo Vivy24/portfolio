@@ -1,149 +1,153 @@
 .contactSection {
-  display: grid;
-  grid-template-columns: 30% [line1] 60% [end];
-  padding: 4em 4em 4em 2em;
+    display: grid;
+    /* grid-template-columns: 30% [line1] 60% [end]; */
+    grid-template-columns: auto [line1] 20% [end];
+
+    padding: 4em 4em 4em 2em;
 }
 
 .header {
-  margin: 3em 4em 0 3em;
-  grid-row-start: 1;
-  background-color: #e75480;
-  height: 300px;
-  width: 280px;
-  position: relative;
+    margin: 3em 4em 0 3em;
+    grid-column-start: line1;
+    background-color: #e75480;
+    height: 300px;
+    width: 280px;
+    position: relative;
 }
 
 .contactSection hr {
-  display: none;
+    display: none;
 }
 
 .content {
-  grid-column-start: line1;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+    margin-top: -200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .content h3 {
-  font-size: 3em;
+    font-size: 3em;
 }
 
 .download a {
-  display: block;
-  width: 30%;
-  background-color: #e75480;
-  color: black;
-  font-weight: bold;
-  font-size: 1.25em;
+    display: block;
+    width: 30%;
+    background-color: #e75480;
+    color: black;
+    font-weight: bold;
+    font-size: 1.25em;
 
-  text-align: center;
-  margin: 1em auto;
-  padding: 0.5em 0;
+    text-align: center;
+    margin: 1em auto;
+    padding: 0.5em 0;
 }
 
 .download {
-  width: 45%;
-  text-align: center;
+    width: 45%;
+    text-align: center;
 }
 .download a:hover {
-  box-shadow: #e75480 0px 3px 50px -12px;
+    box-shadow: #e75480 0 3px 50px -12px;
 }
 
 .contactInfo {
-  width: 45%;
-  text-align: center;
-  margin: 0 auto;
+    width: 45%;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .contactInfo h3 {
-  text-align: center;
+    text-align: center;
 }
 
 .contactInfo ul {
-  list-style: none;
-  margin-left: 10px;
+    list-style: none;
+    margin-left: 10px;
 }
 
 .contactInfo li {
-  font-size: 1.25em;
-  margin-top: 0.25em;
-  text-decoration: underline;
+    font-size: 1.25em;
+    margin-top: 0.25em;
+    text-decoration: underline;
 }
 
 .contactSection h1 {
-  margin-top: 0.5em;
-  position: absolute;
-  right: -50%;
-  transform: rotate(-90deg);
+    margin-top: 0.5em;
+    position: absolute;
+    right: -50%;
+    transform: rotate(90deg);
+
+
 }
 
-@media (max-width: 1850px) {
-  .contactSection {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: block;
-    text-align: center;
-  }
+@media(max-width: 1850px) {
+    .contactSection {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
 
-  .header h1 {
-    position: static;
-    text-transform: uppercase;
-    margin: 0.25em auto;
-    transform: rotate(0);
-    text-align: center;
-  }
+    .header h1 {
+        position: static;
+        text-transform: uppercase;
+        margin: 0.25em auto;
+        transform: rotate(0);
+        text-align: center;
+    }
 
-  .header {
-    padding: 0;
-    margin: 2em 0 2em 0 !important;
-    width: 100%;
-    background-color: transparent;
-    display: block;
-    height: fit-content;
-  }
+    .header {
+        padding: 0 !important;
+        margin: 2em 0 !important;
+        width: 100%;
+        background-color: transparent;
+        display: block;
+        height: fit-content;
+    }
 
-  .contactInfo {
-    width: 100%;
-    display: block;
-  }
+    .contactInfo {
+        width: 100%;
+        display: block;
+    }
 
-  .content {
-    margin: 0;
-    padding: 0;
-    display: block;
-  }
+    .content {
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
 
-  .download {
-    width: 100%;
-    padding: 1em 0;
-    display: block;
-  }
+    .download {
+        width: 100%;
+        padding: 1em 0;
+        display: block;
+    }
 
-  .content h3 {
-    font-size: 2em;
-  }
+    .content h3 {
+        font-size: 2em;
+    }
 
-  .download a {
-    width: 200px;
-  }
+    .download a {
+        width: 200px;
+    }
 
-  .content hr {
-    display: block;
-    margin: 2em auto !important;
-  }
+    .content hr {
+        display: block;
+        margin: 2em auto !important;
+    }
 
-  .contactSection h1 {
-    position: static;
-  }
+    .contactSection h1 {
+        position: static;
+    }
 
-  .contactInfo {
-    padding-bottom: 3em;
-  }
+    .contactInfo {
+        padding-bottom: 3em;
+    }
 }
 
-@media (max-width: 500px) {
-  .download {
-    display: block;
-  }
+@media(max-width: 500px) {
+    .download {
+        display: block;
+    }
 }
