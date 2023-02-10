@@ -37,11 +37,20 @@ const Work = () => {
           </div>
           <div className={`${style.face} ${style.face2}`}>
             <p>
-              <span className={style.jobtitle}>Web Developer - Seneca VAS</span>
+              <span className={style.jobtitle}>
+                System Developer (Co-op) - HOOPP
+              </span>
               <br />
               <span className={style.timeline}>
-                Sep 2021 – Jun 2022 <br />
+                Sep 2022 – April 2023 <br />
               </span>
+              <a
+                data-testid="clink"
+                href="./HOOPPReview.pdf"
+                download="HOOPP Student Evaluation"
+              >
+                Student Evaluation
+              </a>
             </p>
           </div>
         </div>
@@ -66,20 +75,11 @@ const Work = () => {
           </div>
           <div className={`${style.face} ${style.face2}`}>
             <p>
-              <span className={style.jobtitle}>
-                System Developer (Co-op) - HOOPP
-              </span>
+              <span className={style.jobtitle}>Web Developer - Seneca VAS</span>
               <br />
               <span className={style.timeline}>
-                Sep 2022 – April 2023 <br />
+                Sep 2021 – Jun 2022 <br />
               </span>
-              <a
-                data-testid="clink"
-                href="./HOOPPReview.pdf"
-                download="HOOPP Student Evaluation"
-              >
-                Student Evaluation
-              </a>
             </p>
           </div>
         </div>
