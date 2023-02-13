@@ -1,7 +1,7 @@
-import style from "../styles/navbar.module.css";
-import { useState } from "react";
+import style from "../styles/navbar.module.css"
+import { useState } from "react"
 const Navbar = () => {
-  const [chosenLink, setChosenLink] = useState(0);
+  const [chosenLink, setChosenLink] = useState(0)
   return (
     <div className={style.navbar}>
       <div className={style.logo}>
@@ -14,7 +14,7 @@ const Navbar = () => {
         <ul>
           <li
             onClick={() => {
-              setChosenLink(0);
+              setChosenLink(0)
             }}
             className={`${chosenLink == 0 && style.active}`}
           >
@@ -22,7 +22,7 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
-              setChosenLink(1);
+              setChosenLink(1)
             }}
             className={`${chosenLink == 1 && style.active}`}
           >
@@ -30,24 +30,32 @@ const Navbar = () => {
           </li>
           <li
             onClick={() => {
-              setChosenLink(2);
+              setChosenLink(1)
             }}
             className={`${chosenLink == 2 && style.active}`}
+          >
+            <a href="#Work">Work</a>
+          </li>
+          <li
+            onClick={() => {
+              setChosenLink(2)
+            }}
+            className={`${chosenLink == 3 && style.active}`}
           >
             <a href="#Project">Project</a>
           </li>
           <li
             onClick={() => {
-              setChosenLink(3);
+              setChosenLink(3)
             }}
-            className={`${chosenLink == 3 && style.active}`}
+            className={`${chosenLink == 4 && style.active}`}
           >
             <a href="#Contact">Contact</a>
           </li>
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

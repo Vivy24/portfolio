@@ -17,8 +17,8 @@
 }
 
 .navbar .link li {
-    font-size: 15px;
-    padding: 10px 1em;
+    font-size: 12px;
+    padding: 20px 1em;
     display: inline-block;
     color: white;
 }
@@ -31,7 +31,7 @@
     display: none;
 }
 
-@media(min-width:400px) {
+@media(min-width:500px) {
     .navbar .link li {
         font-size: 20px;
         padding: 10px 1em;
@@ -39,7 +39,7 @@
     }
 }
 
-@media(min-width: 600px) {
+@media(min-width: 650PX) {
     .logo {
         display: inline-block;
         font-size: 20px;
