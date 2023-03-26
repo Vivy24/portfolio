@@ -54,7 +54,6 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               ]}
               image={"image/projects/peertutor.png"}
               github={"https://github.com/Vivy24/PeerTutor"}
-              publicLink={"https://peer-tutor-vivy.herokuapp.com/"}
             />
           </div>
 
@@ -86,7 +85,6 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               languageArray={["Flask", "EJS", "MySQL", "Bootstrap"]}
               image={"image/projects/webstorage.png"}
               github={"https://github.com/Vivy24/WS"}
-              publicLink={"https://websitestorage.herokuapp.com/"}
             />
           </div>
 
@@ -102,7 +100,6 @@ const EmblaCarousel = ({ options = { loop: true } }) => {
               languageArray={["ExpressJS", "MongoDB", "EJS", "Bootstrap"]}
               image={"image/projects/janestore.png"}
               github={"https://github.com/Vivy24/JaneStore"}
-              publicLink={"https://janestore12.herokuapp.com/"}
             />
           </div>
 
